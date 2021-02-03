@@ -1,0 +1,15 @@
+._circle-progress span {
+  font-size: 50px;
+  /*  transform: translate(-50%, -50%) scale(-1, 1) !important;*/
+
+}
+._circle-progress{
+  /*  transform: scale(-1, 1);*/
+}
+
+.wrapper{
+  display: flex;
+}
+/*._circle-progress span::after {
+  content: '%';
+}*/
