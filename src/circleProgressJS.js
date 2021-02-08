@@ -1,3 +1,9 @@
+  if (!String.prototype.replaceAll) {
+    String.prototype.replaceAll = function(str, newStr){
+      return this.split(str).join(newStr);
+
+    };
+  }
   function linear(timeFraction){
     return timeFraction;
   }
@@ -10,7 +16,7 @@
       else if(replace.length > 0){
         let tmp = procent.toFixed(fixed).toString();
         for(let i = 0;i < replace.length;i++){
-          tmp = tmp.replaceAll(replace[i][0],replace[i][1]);
+          tmp = tmp.replaceAll.split(replace[i][0]).join(replace[i][1]);
         }
         spanProcent.innerHTML = tmp;
       }else{
@@ -409,7 +415,7 @@
               c.strokeStyle = color;
             }
             else{
-              c.strokeStyle = "rgba("+((endColor[0]-color[0])*progress+color[0])+","+((endColor[1]-color[1])*progress+color[1])+","+((endColor[2]-color[2])*progress+color[2])+","+((endColor[3]-color[3])*progress+color[3])+")";
+              c.strokeStyle = "rgba("+((endColor[0]-color[0])*progress+color[0]).toFixed()+","+((endColor[1]-color[1])*progress+color[1]).toFixed()+","+((endColor[2]-color[2])*progress+color[2]).toFixed()+","+((endColor[3]-color[3])*progress+color[3])+")";
             }
             if(animateWidth){
               c.lineWidth = (endWidth-width)*progress+width;
@@ -439,7 +445,7 @@
             c.strokeStyle = progressColor;
           }
           else{
-            c.strokeStyle = "rgba("+((endProgressColor[0]-progressColor[0])*progress+progressColor[0])+","+((endProgressColor[1]-progressColor[1])*progress+progressColor[1])+","+((endProgressColor[2]-progressColor[2])*progress+progressColor[2])+","+((endProgressColor[3]-progressColor[3])*progress+progressColor[3])+")";
+            c.strokeStyle = "rgba("+((endProgressColor[0]-progressColor[0])*progress+progressColor[0]).toFixed()+","+((endProgressColor[1]-progressColor[1])*progress+progressColor[1]).toFixed()+","+((endProgressColor[2]-progressColor[2])*progress+progressColor[2]).toFixed()+","+((endProgressColor[3]-progressColor[3])*progress+progressColor[3])+")";
           }
           if(animateProgressWidth){
             c.lineWidth = (endProgressWidth-progressWidth)*progress+progressWidth;
